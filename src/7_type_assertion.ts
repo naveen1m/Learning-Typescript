@@ -33,3 +33,39 @@ btn3.onclick
  * <form>    - HTMLFormElement
  * <span>    - HTMLSpanElement
  */
+
+
+interface Person1 {
+    [key: string]: string; // dynamic key
+}
+const myobj: Person1 = {
+    name: "naveen",
+    email: "navstr10@gmail.com"
+}
+
+const getdata = (key: string): string => {
+    return myobj[key];
+}
+
+getdata("name")
+getdata("lol")  // wrong key passed
+
+interface Person2 {
+    name: string,
+    email: string
+}
+
+const myobj2: Person2 = {
+    name: "naveen",
+    email: "navstr10@gmail.com"
+}
+
+const getdata2 = (key: "name" | "email"): string => {
+    return myobj[key];
+}
+getdata2("name");
+// getdata2("lol");  // Error: Argument of type '"lol"' is not assignable to parameter of type '"name" | "email"'.
+
+const getdata3 = (key: keyof Person2): string => {
+    return myobj[key];
+}

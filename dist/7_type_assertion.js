@@ -13,16 +13,24 @@ const btn2 = document.getElementById("btn");
 btn2.onclick;
 const btn3 = document.getElementById("btn"); // not null
 btn3.onclick;
-/** DOM MANIPULATION HTML ELEMENT TO ACCESS ALL PROPERTIES
- * <button>  - HTMLButtonElement
- * <input>   - HTMLInputElement
- * <a>       - HTMLAnchorElement
- * <p>       - HTMLParagraphElement
- * <h1>...<h6> - HTMLHeadingElement
- * <ul>      - HTMLUListElement
- * <ol>      - HTMLOListElement
- * <li>      - HTMLLListElement
- * <img>     - HTMLImageElement
- * <form>    - HTMLFormElement
- * <span>    - HTMLSpanElement
- */
+const myobj = {
+    name: "naveen",
+    email: "navstr10@gmail.com"
+};
+const getdata = (key) => {
+    return myobj[key];
+};
+getdata("name");
+getdata("lol"); // wrong key passed
+const myobj2 = {
+    name: "naveen",
+    email: "navstr10@gmail.com"
+};
+const getdata2 = (key) => {
+    return myobj[key];
+};
+getdata2("name");
+// getdata2("lol");  // Error: Argument of type '"lol"' is not assignable to parameter of type '"name" | "email"'.
+const getdata3 = (key) => {
+    return myobj[key];
+};
