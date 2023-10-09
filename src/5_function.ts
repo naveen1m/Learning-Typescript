@@ -42,3 +42,17 @@ const product1: Product = {
     photo: "photo url"
 }
 getData(product1);
+
+// Never type
+const err = new Error();  // type Error
+
+const errHandler = (): never => {
+    throw new Error();
+    // return new Error();  // type Error
+}
+
+type thememode = "light" | "dark";  // userdefined type
+
+const mode1: thememode = "light";
+const mode2: thememode = "dark"
+// const mode3: thememode = "dracula"; // Error: Type '"dracula"' is not assignable to type 'thememode'.
