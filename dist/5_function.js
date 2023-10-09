@@ -24,3 +24,12 @@ const product1 = {
     photo: "photo url"
 };
 getData(product1);
+// Never type
+const err = new Error(); // type Error
+const errHandler = () => {
+    throw new Error();
+    // return new Error();  // type Error
+};
+const mode1 = "light";
+const mode2 = "dark";
+// const mode3: thememode = "dracula"; // Error: Type '"dracula"' is not assignable to type 'thememode'.
