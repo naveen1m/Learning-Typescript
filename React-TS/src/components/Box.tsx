@@ -1,4 +1,3 @@
-import React from 'react'
 
 function Box({ heading }: { heading: string }) {
     return (
